@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yanshi, Henan, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.72312,34.63003]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luoyang, Henan, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.45361,34.68361]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chang’an, Shanxi, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.03639,37.80472]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liangzhou, Gansu, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [102.7768,37.90447]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guazhou, Gansu, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.67119,40.46384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yumenguan, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [93.81667,40.33333]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hami, Xinjiang, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [93.50138,42.83129]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turfan, Xinjiang, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [89.17886,42.94769]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kuche, Xinjiang, China"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [82.93639,41.72778]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Samarqand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [66.95972,39.65417]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bamyan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [67.82734,34.82156]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kashmir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [76.66667,33.91667]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lumbini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.27714,27.48619]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bodhgaya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [84.9869,24.69808]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nalanda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [85.2638,25.0812]
+      }
+    }
+  ]
+}

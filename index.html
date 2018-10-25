@@ -27,8 +27,8 @@
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/cartyrya/cjnga64dh3tdy2sls611ph10y', // replace this with your style URL
-      center: [34.72722, 112.789534],
-      zoom: 10.7
+      center: [112.789534, 34.72722],
+      zoom: 3.8
     });
     map.on('click', function(e) {
       var features = map.queryRenderedFeatures(e.point, {

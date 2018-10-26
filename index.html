@@ -43,13 +43,13 @@
     mapboxgl.accessToken = 'pk.eyJ1Ijoia291dGlhbnkiLCJhIjoiY2puZzdxY3V4MDAzcjNtcHVid3RmMTc2eSJ9.jakbkG46bVyAT-ZwxS2ddg'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/koutiany/cjnpaxp2r21d52rqjbsgqgvjo', // replace this with your style URL
+      style: 'mapbox://styles/koutiany/cjnqc3eg20xcs2spl20p7n0pj', // replace this with your style URL
       center: [88.00, 35.00],
       zoom: 3.8
     });
     map.on('click', function(e) {
       var features = map.queryRenderedFeatures(e.point, {
-        layers: ['xuanzang'] // replace this with the name of the layer
+        layers: ['pleasework'] // replace this with the name of the layer
       });
 
       if (!features.length) {
@@ -60,7 +60,7 @@
 
       var popup = new mapboxgl.Popup({ offset: [0, -15] })
         .setLngLat(feature.geometry.coordinates)
-        .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p><p>' + feature.properties.image + '</p><p>' + feature.properties.wikipedia + '</p>')
+        .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p>')
         .setLngLat(feature.geometry.coordinates)
         .addTo(map);
     });

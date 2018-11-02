@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A map of Xuanzang's 7th century journey from China to India">
     <meta name="author" content="CHI Grad Fellows">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
 
     <title>Xuanzang's Journey</title>
 
@@ -22,22 +20,6 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-
-    <!-- Map Style -->
-    <style>
-
-      #map {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      }
-
-      .mapboxgl-popup-content p {
-      width: 600px;
-      }
-
-    </style>
 
   </head>
 
@@ -59,7 +41,7 @@
           <a class="js-scroll-trigger" href="#about">Story</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Map</a>
+          <a class="js-scroll-trigger" href="https://cartyrya.github.io/xuanzangmap/map.html">Map</a>
         </li>
       </ul>
     </nav>
@@ -86,36 +68,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Map -->
-    <section id="contact" class="map">
-      <script>
-      mapboxgl.accessToken = 'pk.eyJ1Ijoia291dGlhbnkiLCJhIjoiY2puZzdxY3V4MDAzcjNtcHVid3RmMTc2eSJ9.jakbkG46bVyAT-ZwxS2ddg'; // replace this with your access token
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/koutiany/cjnqc3eg20xcs2spl20p7n0pj', // replace this with your style URL
-        center: [88.00, 35.00],
-        zoom: 3.8
-      });
-      map.on('click', function(e) {
-        var features = map.queryRenderedFeatures(e.point, {
-          layers: ['ithastowork'] // replace this with the name of the layer
-        });
-
-        if (!features.length) {
-          return;
-        }
-
-        var feature = features[0];
-
-        var popup = new mapboxgl.Popup({ offset: [0, -15] })
-          .setLngLat(feature.geometry.coordinates)
-          .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p><p>' + feature.properties.image + '</p><p>' + feature.properties.wikipedia + '</p>')
-          .setLngLat(feature.geometry.coordinates)
-          .addTo(map);
-      });
-      </script>
     </section>
 
     <!-- Footer -->

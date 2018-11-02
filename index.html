@@ -1,99 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A map of Xuanzang's 7th century journey from China to India">
-    <meta name="author" content="CHI Grad Fellows">
-
+    <meta charset='utf-8' />
     <title>Xuanzang's Journey</title>
+    <meta name="description" content="A map of Xuanzang's 7th century journey from China to India" />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .mapboxgl-popup-content p {
+       width: 600px;
+      }
+      .overlay-background {
+        opacity: 0.5;
+        background-color: #000;
+        z-index: 5;
+        padding: 10px;
+        color: #fff;
+        position: absolute;
+      }
+      .project-description {
+        top: 100px;
+      }
+    </style>
   </head>
+  <body>
+    <h1 class="overlay-background">Xuanzang's Journey</h1>
+    <p class="overlay-background project-description">A Map of Xuanzang's journey from China to India in the 7th century.</p>
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia291dGlhbnkiLCJhIjoiY2puZzdxY3V4MDAzcjNtcHVid3RmMTc2eSJ9.jakbkG46bVyAT-ZwxS2ddg'; // replace this with your access token
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/koutiany/cjnqc3eg20xcs2spl20p7n0pj', // replace this with your style URL
+      center: [88.00, 35.00],
+      zoom: 3.8
+    });
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point, {
+        layers: ['ithastowork'] // replace this with the name of the layer
+      });
 
-  <body id="page-top">
+      if (!features.length) {
+        return;
+      }
 
-    <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Xuanzang</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">Story</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="https://cartyrya.github.io/xuanzangmap/map.html">Map</a>
-        </li>
-      </ul>
-    </nav>
+      var feature = features[0];
 
-    <!-- Header -->
-    <header class="masthead d-flex">
-      <div class="container text-center my-auto">
-        <h1 class="mb-1">Xuanzang</h1>
-        <h3 class="mb-5">
-          <em>The journey of a Chinese Buddhist monk in the 7th century</em>
-        </h3>
-      </div>
-      <div class="overlay"></div>
-    </header>
-
-    <!-- About -->
-    <section class="content-section bg-light" id="about">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h2>The Story</h2>
-            <p class="lead mb-5">Xuanzang left his home as a Buddhist monk and returned as a master. He traveled to India in the 7th century to find the complete set of Buddhist texts and returned to China with 47 Buddhist scriptures. Moreover, Xuanzang facilitated the translation of 1,335 Buddhist volumes, increased the fame of the Tang Dynasty, and established communication between Chinese and Indian Buddhist monks. His journey inspired many literary works, including <a href="https://en.wikipedia.org/wiki/Journey_to_the_West">Journey to the West</a>, later considered one of the four great classical novels of Chinese literature.</p>
-            <p class="lead mb-5"><a href="https://cartyrya.github.io/xuanzangmap/map.html">The map</a> is based on the Great Tang Records on the Western Regions, an account of Xuanzang’s journey written by his disciple. The book records Xuanzang’s journey from Chang’an along the Silk Road to Central Asia and eventually to India. <a href="https://cartyrya.github.io/xuanzangmap/map.html">The map</a> displays fifteen important points recorded by Xuanzang’s disciple and illustrates the tremendous area covered by Xuanzang in the 7th century.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer text-center">
-      <div class="container">
-        <ul class="list-inline mb-5">
-        </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Xuanzang 2018</p>
-      </div>
-    </footer>
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.min.js"></script>
-
+      var popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p><p>' + feature.properties.image + '</p><p>' + feature.properties.wikipedia + '</p>')
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+    });
+    </script>
   </body>
-
 </html>

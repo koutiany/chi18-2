@@ -93,8 +93,12 @@ height: 30rem;
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("https://static.gbtimes.com/uploads/old/2016/10/05/xuanzang_da_yan_ta_statue_cropped.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("https://static.gbtimes.com/uploads/old/2016/10/05/xuanzang_da_yan_ta_statue_cropped.jpg"
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("
+        xuanzangmap/img/Xuanzang_returned_from_India._Dunhuang_mural,_Cave_103._High_Tang_period_(712-765)..jpg
+      ");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("
+        xuanzangmap/img/Xuanzang_returned_from_India._Dunhuang_mural,_Cave_103._High_Tang_period_(712-765)..jpg
+      "
   );
   background-position: center center;
   background-repeat: no-repeat;
